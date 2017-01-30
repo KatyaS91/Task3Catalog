@@ -11,16 +11,22 @@ public final class Controller {
 
     private final char paramDelimeter = ' ';
 
+    News news;
+
+    public void setNews(News news) {
+        this.news = news;
+    }
+
+
     public String executeTask(String request, News news){
         String commandName;
         Command executionCommand;
 
         commandName = request.substring(0, request.indexOf(paramDelimeter));
         executionCommand = provider.getCommand(commandName);
-        provider.setNews(news);
 
         String response;
-        response = executionCommand.execute(request);
+        response = executionCommand.execute(news);
 
         return response;
     }

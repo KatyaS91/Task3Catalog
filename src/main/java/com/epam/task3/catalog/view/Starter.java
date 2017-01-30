@@ -16,6 +16,6 @@ public class Starter {
         newsTest.setDescription("«Заводно́й апельси́н» (англ. A Clockwork Orange) — роман Энтони Бёрджесса, написанный в 1962 году, лёг в основу одноимённого фильма");
 
         Controller controller = new Controller();
-        controller.executeTask("add news", newsTest);
+        System.out.println(controller.executeTask("Add news", newsTest));
     }
 }

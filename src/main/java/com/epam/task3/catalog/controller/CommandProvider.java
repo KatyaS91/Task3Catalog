@@ -11,10 +11,6 @@ import java.util.Map;
 final class CommandProvider {
     private final Map<CommandName, Command> repository = new HashMap();
 
-    News news;
-
-    public void setNews(News news) {this.news = news;}
-
 
     CommandProvider(){
         repository.put(CommandName.ADD_NEWS, new AddNews());

@@ -9,14 +9,14 @@ import com.epam.task3.catalog.service.ServiceFactory;
  * Created by skarzhynskaya_katya on 1/30/17.
  */
 public class FindByTitle implements Command {
-    public String execute(String request, News news){
+    public String execute(News news) {
         String response = null;
 
         // взять параметры из запроса и инициализировать объект
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         NewsService newsService = serviceFactory.getNewsService();
         try {
-            News x = newsService.findByTitle();
+            News x = newsService.findByTitle(news);
             response = "Найденные новости: " + x.toString();
         } catch (ServiceException e){
             response = "Ошибка во время поиска по названию";

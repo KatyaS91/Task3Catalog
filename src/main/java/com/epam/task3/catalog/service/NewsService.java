@@ -8,7 +8,8 @@ import com.epam.task3.catalog.beans.News;
 public interface NewsService {
 
     void addNews(News news) throws ServiceException;
-    void findByDate(News news) throws ServiceException;
-    void findByTitle(News news) throws ServiceException;
-    void findByType(News news) throws ServiceException;
+
+    News findByTitle(News news) throws ServiceException;
+
+    News findByType(News news) throws ServiceException;
 }

@@ -18,17 +18,12 @@ public class NewsServiceImpl implements NewsService {
 
     }
 
-    public void findByDate(News news) throws ServiceException {
-        // проверяет параметры
 
-
+    public News findByTitle(News news) throws ServiceException {
+        return news;
     }
 
-    public void findByTitle(News news) throws ServiceException {
-
-    }
-
-    public void findByType(News news) throws ServiceException {
-
+    public News findByType(News news) throws ServiceException {
+        return news;
     }
 }

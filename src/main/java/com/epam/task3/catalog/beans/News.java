@@ -9,7 +9,6 @@ public class News {
     String title;
     String type;
     String description;
-    //Date date;
 
     public String getTitle() {
         return title;
@@ -35,11 +34,14 @@ public class News {
         this.description = description;
     }
 
-/*    public Date getDate() {
-        return date;
+    @Override
+    public String toString() {
+        return "News{" +
+                "title='" + title + '\'' +
+                ", type='" + type + '\'' +
+                ", description='" + description + '\'' +
+                '}';
     }
 
-    public void setDate(Date date) {
-        this.date = date;
-    }*/
+
 }

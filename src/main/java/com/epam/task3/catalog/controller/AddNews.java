@@ -12,25 +12,11 @@ public class AddNews implements Command {
 
     String response = null;
 
-    News news;
-    public void setNews(News news) {        this.news = news;    }
-
-    public AddNews(String response, News news) {
-        this.news = news;
-        this.response = response;
-    }
-
-    public AddNews(){
-        this.response = response;
-        this.news = news;
-    }
-
-    public String execute(String request){
-        // взять параметры из запроса и инициализировать объект, созд объект?
+    public String execute(News news) {
         ServiceFactory serviceFactory = ServiceFactory.getInstance();
         NewsService newsService = serviceFactory.getNewsService();
         try {
-            newsService.addNews();
+            newsService.addNews(news);
             response = "Новость добавлена";
         } catch (ServiceException e){
             response = "Ошибка добавления новости";

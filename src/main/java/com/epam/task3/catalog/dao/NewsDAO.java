@@ -7,7 +7,8 @@ import com.epam.task3.catalog.beans.News;
  */
 public interface NewsDAO {
     void addNews(News news) throws DAOException;
-    void findByDate(News news) throws DAOException;
-    void findByTitle(News news) throws DAOException;
-    void findByType(News news) throws DAOException;
+
+    News findByTitle(News news) throws DAOException;
+
+    News findByType(News news) throws DAOException;
 }
